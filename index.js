@@ -1,5 +1,14 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  //loops through string halfway
+  for (let startStringIndex = 0; startStringIndex < word.length / 2; startStringIndex++) {
+    const endStringIndex = word.length - 1 - startStringIndex;
+    //comparing the firstletter with the last letter
+    if (word[startStringIndex] !== word[endStringIndex]) {
+      return false;
+    }
+  }
+
+  return true;
 }
 
 /* 
